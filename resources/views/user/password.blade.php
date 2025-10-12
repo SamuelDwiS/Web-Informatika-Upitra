@@ -10,7 +10,7 @@
                 <p class="alert alert-danger">{{ $err }}</p>
             @endforeach
         @endif
-        <form action="{{ route('password.action') }}" method="POST">
+        <form action="{{ route('password_action') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label>Password <span class="text-danger">*</span></label>

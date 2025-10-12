@@ -1,18 +1,4 @@
-
-@extends('app')
-@section('content')
-    <section class="vh-100">
-        <div class="container-fluid h-custom">
-            <div class="row d-flex justify-content-center align-items-center vh-100">
-
-                <div class="row w-75 shadow p-5 rounded bg-white">
-                    <!-- Logo Kampus -->
-                    <div class="col-md-9 col-lg-6 col-xl-5">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                            class="img-fluid" alt="Logo Kampus">
-                    </div>
-
-                    <!-- Form Login -->
+  <!-- Form Login -->
                     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                         {{-- Alert Section --}}
                         @if (session('success'))
@@ -24,12 +10,12 @@
                             @endforeach
                         @endif
 
-                        <form action="{{ route('login_action') }}" method="POST">
+                        <form action="{{ route('login_admin_action') }}" method="POST">
                             @csrf
 
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="username">Username</label>
-                                <input type="text" name="username" id="username"
+                                <input type="text" name="username_admin" id="username"
                                     class="form-control form-control-lg @error('username') is-invalid @enderror"
                                     value="{{ old('username') }}" placeholder="Enter your username" required />
                                 @error('username')
@@ -62,11 +48,3 @@
 
                         </form>
                     </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Footer -->
-    </section>
-@endsection

@@ -31,7 +31,7 @@
 
             <div class="mb-3">
                <button class="btn btn-primary">Register</button>
-               <a class="btn btn-danger" href="{{ route('home') }}"></a>
+               <a class="btn btn-danger" href="{{ route('home') }}">Back to Home Page</a>
             </div>
             
             
