@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         {{-- Ganti Logo Upitra --}}
-        <a class="navbar-brand" href="#">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <img src="img/upitra.png" alt="logo" width="75px">
+        <a class="navbar-brand" href="#">Informatika</a>
+        <div class="collapse navbar-collapse " id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Profil</a>

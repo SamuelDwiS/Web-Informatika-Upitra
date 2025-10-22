@@ -22,6 +22,7 @@ class UserController extends Controller
             'username' => 'required|unique:tb_user',
             'password' => 'required',
             'password_confirm' => 'required|same:password',
+
         ]);
 
         $user = new User([
@@ -44,16 +45,18 @@ class UserController extends Controller
     public function login_action(Request $request)
     {
         $request->validate([
-            'username'=> 'required',
-            'password'=> 'required',
+            'username' => 'required',
+            'password' => 'required',
         ]);
 
-        if(Auth::attempt(['username' => $request->username, 'password'=> $request->password]))
-        {
+        if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             $user = Auth::user();
 
+            if ($user->role !== 'admin') {
+                return redirect()->intended('/');
+            }
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('admin/dashboard');
         }
 
         return back()->withErrors([
@@ -70,8 +73,8 @@ class UserController extends Controller
     public function password_action(Request $request)
     {
         $request->validate([
-            'old_password'=> 'required|current_password',
-            'new_password'=> 'required|confirmed',
+            'old_password' => 'required|current_password',
+            'new_password' => 'required|confirmed',
         ]);
 
         $user = User::find(Auth::id());
@@ -79,7 +82,6 @@ class UserController extends Controller
         $user->save();
         $request->session()->regenerate();
         return back()->with('success', 'Password Changed !');
-
     }
 
     public function logout(Request $request)
@@ -89,8 +91,4 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
-
-
-
-
 }

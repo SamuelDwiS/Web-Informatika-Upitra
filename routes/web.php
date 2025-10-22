@@ -8,8 +8,9 @@ Route::get('/home', function () {
 })->name('home');
 
 Route::get('/', function () {
-    return view('layouts/main');
+    return view('app', ['title' => 'Program Studi Informatika']);
 });
+
 
 
 Route::get('register', [UserController::class, 'register'])->name('register');
