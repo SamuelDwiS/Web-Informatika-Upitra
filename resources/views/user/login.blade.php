@@ -1,14 +1,15 @@
 
 @extends('app')
 @section('content')
-    <section class="vh-100">
+    <section class="vh-100 d-flex justify-content-center align-items-center"
+        style="background: url('{{ asset('asset/bg.jpg') }}') center/cover no-repeat;">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center vh-100">
 
                 <div class="row w-75 shadow p-5 rounded bg-white">
                     <!-- Logo Kampus -->
                     <div class="col-md-9 col-lg-6 col-xl-5">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                        <img src="{{asset('asset/logo_upitra.png') }}"
                             class="img-fluid" alt="Logo Kampus">
                     </div>
 
@@ -53,7 +54,7 @@
                                     <input class="form-check-input me-2" type="checkbox" value="" id="remember" />
                                     <label class="form-check-label" for="remember">Remember me</label>
                                 </div>
-                                <a href="#!" class="text-body">Forgot password?</a>
+                                <a href="{{ route('password') }}" class="text-body">Forgot password?</a>
                             </div>
 
                             <div class="text-center text-lg-start mt-4 pt-2">

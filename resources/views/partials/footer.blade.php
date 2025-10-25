@@ -1,4 +1,4 @@
-<footer class="footer-custom text-dark  pt-5 pb-4">
+<footer class="footer-custom text-light  pt-5 pb-4" style="background-color: #11215B">
     <div class="container">
         <div class="row">
 
@@ -23,10 +23,10 @@
             <div class="col-md-4 col-lg-3 mb-4">
                 <h5 class="text-uppercase mb-4 fw-bold">Link Cepat</h5>
                 <ul class="list-unstyled link-cepat">
-                    <li class="mb-2"><a href="#" class="text-dark text-decoration-none">Profil</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark text-decoration-none">Akademik</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark text-decoration-none">Berita</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark text-decoration-none">Pendaftaran</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Profil</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Akademik</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Berita</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Pendaftaran</a></li>
                 </ul>
             </div>
 
