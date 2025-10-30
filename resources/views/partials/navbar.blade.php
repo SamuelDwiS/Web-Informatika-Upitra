@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        {{-- Ganti Logo Upitra --}}
+        
         <img src="img/upitra.png" alt="logo" width="75px">
         <a class="navbar-brand" href="#">Informatika</a>
         <div class="collapse navbar-collapse " id="navbarNav">
